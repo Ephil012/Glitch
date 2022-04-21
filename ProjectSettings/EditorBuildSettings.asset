@@ -8,5 +8,14 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 88eb5c3d99a2a474092d6219f12b1956
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 592147e22e38e48e6b489b6e6d1c51be
+  - enabled: 1
+    path: Assets/Scenes/JoystickMovement.unity
+    guid: 35c09892293264d0eb8f383c7d1ccd73
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3977d830b1fb24640ad912f54d34fc12, type: 2}

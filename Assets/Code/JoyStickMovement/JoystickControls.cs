@@ -25,7 +25,7 @@ public class JoystickControls : MonoBehaviour
         joystick.transform.position = Input.mousePosition;
         joystickBackground.transform.position = Input.mousePosition;
         joystickTouchPos = Input.mousePosition;
-        print(joystickTouchPos);
+        // print(joystickTouchPos);
     }
 
     public void Drag(BaseEventData baseEventData) {
