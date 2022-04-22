@@ -391,6 +391,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5744221168899325825, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
+      propertyPath: joystickControls
+      value: 
+      objectReference: {fileID: 932381771}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
 --- !u!1001 &474407023
@@ -754,11 +758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4205740261019476, guid: dcf76343326e5514abbe873a7967f41b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.51
+      value: 4.29
       objectReference: {fileID: 0}
     - target: {fileID: 4205740261019476, guid: dcf76343326e5514abbe873a7967f41b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.96
+      value: -1.73
       objectReference: {fileID: 0}
     - target: {fileID: 4205740261019476, guid: dcf76343326e5514abbe873a7967f41b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -818,7 +822,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 0.7528169, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.7254902, g: 0.7372549, b: 0.7607843, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -981,7 +985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4777656561539712, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4777656561539712, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1014,41 +1018,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1635833487047996, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
   m_PrefabInstance: {fileID: 435454127}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1714930644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714930643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d88720604d5b4f3f996bf5524c5eae9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystickControls: {fileID: 932381771}
-  playerSpeed: 4
---- !u!50 &1714930648
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714930643}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &1808044564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,7 +1172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4811327347987038, guid: a2a3dd4b2b2a74041a57a6a0639b13b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.58
+      value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: 4811327347987038, guid: a2a3dd4b2b2a74041a57a6a0639b13b9, type: 3}
       propertyPath: m_LocalPosition.z
