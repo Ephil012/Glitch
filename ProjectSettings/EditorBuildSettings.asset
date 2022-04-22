@@ -18,4 +18,5 @@ EditorBuildSettings:
     path: Assets/Scenes/JoystickMovement.unity
     guid: 35c09892293264d0eb8f383c7d1ccd73
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 2118fdae102b5433090ad65d624e2df8, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3977d830b1fb24640ad912f54d34fc12, type: 2}
