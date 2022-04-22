@@ -20,8 +20,6 @@ public class JoystickControls : MonoBehaviour
     }
 
     public void PointerDown() {
-        joystick.SetActive(true);
-        joystickBackground.SetActive(true);
         joystick.transform.position = Input.mousePosition;
         joystickBackground.transform.position = Input.mousePosition;
         joystickTouchPos = Input.mousePosition;
@@ -43,8 +41,6 @@ public class JoystickControls : MonoBehaviour
     }
 
     public void PointerUp() {
-        joystick.SetActive(false);
-        joystickBackground.SetActive(false);
         joystickVector = Vector2.zero;
         joystick.transform.position = joystickStartPosition;
         joystickBackground.transform.position = joystickStartPosition;
