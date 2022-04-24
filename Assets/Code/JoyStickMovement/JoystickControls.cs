@@ -11,39 +11,44 @@ public class JoystickControls : MonoBehaviour
     public Vector2 joystickVector;
     private Vector2 joystickTouchPos;
     private Vector2 joystickStartPosition;
+    private Vector2 joystickBackgroundStartPosition;
     private float joystickRadius;
     
     void Start()
     {
-        joystickStartPosition = joystickBackground.transform.position;
-        joystickRadius = joystickBackground.GetComponent<RectTransform>().sizeDelta.y / 4;
+        joystickStartPosition = joystick.transform.position;
+        joystickBackgroundStartPosition = joystickBackground.transform.position;
+        joystickRadius = joystickBackground.GetComponent<RectTransform>().sizeDelta.y / 2;
     }
 
     public void PointerDown() {
-        joystick.transform.position = Input.mousePosition;
-        joystickBackground.transform.position = Input.mousePosition;
-        joystickTouchPos = Input.mousePosition;
-        // print(joystickTouchPos);
+        float joystickDist = Vector2.Distance(Input.mousePosition, joystickStartPosition);
+
+        if (joystickDist < joystickRadius) {
+            joystick.transform.position = joystickStartPosition + joystickVector * joystickDist;
+        } else {
+            joystick.transform.position = joystickStartPosition + joystickVector * joystickRadius;
+        }
     }
 
     public void Drag(BaseEventData baseEventData) {
         PointerEventData pointerEventData = baseEventData as PointerEventData;
         Vector2 dragPos = pointerEventData.position;
-        joystickVector = (dragPos - joystickTouchPos).normalized;
+        joystickVector = (dragPos - joystickStartPosition).normalized;
         
-        float joystickDist = Vector2.Distance(dragPos, joystickTouchPos);
+        float joystickDist = Vector2.Distance(dragPos, joystickStartPosition);
 
         if (joystickDist < joystickRadius) {
-            joystick.transform.position = joystickTouchPos + joystickVector * joystickDist;
+            joystick.transform.position = joystickStartPosition + joystickVector * joystickDist;
         } else {
-            joystick.transform.position = joystickTouchPos + joystickVector * joystickRadius;
+            joystick.transform.position = joystickStartPosition + joystickVector * joystickRadius;
         }
     }
 
     public void PointerUp() {
         joystickVector = Vector2.zero;
         joystick.transform.position = joystickStartPosition;
-        joystickBackground.transform.position = joystickStartPosition;
+        joystickBackground.transform.position = joystickBackgroundStartPosition;
     }
 
 }
