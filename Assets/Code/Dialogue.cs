@@ -13,6 +13,8 @@ public class Dialogue : MonoBehaviour
     bool hasOpened = false;
     int index;
 
+    AudioSource _audioSource;
+
     public void PrecheckDialogue() {
         print("Dialogue: PrecheckDialogue");
         if (!hasOpened) {
@@ -20,9 +22,14 @@ public class Dialogue : MonoBehaviour
             StartDialogue();
         } else {
             textBox.text = string.Empty;
-            StartDialogue();
-            // gameObject.SetActive(false);
+            // StartDialogue();
+            gameObject.SetActive(false);
         }
+    }
+
+    void Awake() {
+        print("Dialogue: Awake");
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -39,6 +46,7 @@ public class Dialogue : MonoBehaviour
                 NextLine();
             } else {
                 StopAllCoroutines();
+                _audioSource.Stop();
                 textBox.text = lines[index];
             }
         }
@@ -50,10 +58,12 @@ public class Dialogue : MonoBehaviour
     }
 
     IEnumerator TypeOut() {
+        _audioSource.Play();
         foreach (char c in lines[index].ToCharArray()) {
             textBox.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        _audioSource.Stop();
     }
 
     void NextLine() {
