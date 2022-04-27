@@ -6,13 +6,14 @@ using UnityEngine.EventSystems;
 public class OpenDoor : MonoBehaviour
 {
 
-     private Collider2D collider;
-
+    //  private Collider2D collider;
+    public GameObject lockedDoor;
+    public GameObject unlockedDoor;
 
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<Collider2D>();
+        // collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -39,12 +40,12 @@ public class OpenDoor : MonoBehaviour
      {
          if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
          {
-            print(collider);
+            print(GetComponent<Collider>());
              var wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
              var touchPosition = new Vector2(wp.x, wp.y);
  
             print(touchPosition + " " + Physics2D.OverlapPoint(touchPosition));
-             if (collider == Physics2D.OverlapPoint(touchPosition)){
+             if (GetComponent<Collider>() == Physics2D.OverlapPoint(touchPosition)){
                  Debug.Log("HIT!");
              }
              else{
@@ -53,4 +54,9 @@ public class OpenDoor : MonoBehaviour
          }
          return false;
      }
+
+    public void UnlockDoor() {
+        lockedDoor.SetActive(false);
+        unlockedDoor.SetActive(true);
+    }
 }

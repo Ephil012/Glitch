@@ -14,6 +14,8 @@ public class DeBugMinigame : MonoBehaviour
 
     public Collider2D collider;
 
+    public GameObject TopDoor;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class DeBugMinigame : MonoBehaviour
         if (score > 2) {
             print("DeBugMinigame: Score > 10. Found 10 Bugs");
             gameObject.SetActive(false);
+            TopDoor.BroadcastMessage("UnlockDoor");
         }
     }
 
