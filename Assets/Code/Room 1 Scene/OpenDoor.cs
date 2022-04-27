@@ -6,13 +6,17 @@ using UnityEngine.EventSystems;
 public class OpenDoor : MonoBehaviour
 {
 
-     private Collider2D collider;
+    //  private Collider2D collider;
+    public GameObject lockedDoor;
+    public GameObject unlockedDoor;
+    public GameObject leftDoor;
 
+    bool isDoorLocked = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<Collider2D>();
+        // collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -39,12 +43,12 @@ public class OpenDoor : MonoBehaviour
      {
          if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
          {
-            print(collider);
+            print(GetComponent<Collider>());
              var wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
              var touchPosition = new Vector2(wp.x, wp.y);
  
             print(touchPosition + " " + Physics2D.OverlapPoint(touchPosition));
-             if (collider == Physics2D.OverlapPoint(touchPosition)){
+             if (GetComponent<Collider>() == Physics2D.OverlapPoint(touchPosition)){
                  Debug.Log("HIT!");
              }
              else{
@@ -53,4 +57,28 @@ public class OpenDoor : MonoBehaviour
          }
          return false;
      }
+
+    public void UnlockDoor() {
+        lockedDoor.SetActive(false);
+        unlockedDoor.SetActive(true);
+        isDoorLocked = false;
+
+        if (!isDoorLocked) StartCoroutine(SlideDoor());
+    }
+
+    IEnumerator SlideDoor() {
+        float t = 0;
+        Vector3 startLeftDoorPosition = leftDoor.transform.position;
+        Vector3 startRightDoorPosition = unlockedDoor.transform.position;
+        Vector3 newLeftDoorPosition = startLeftDoorPosition + new Vector3(-1, 0, 0);
+        Vector3 newRightDoorPosition = startRightDoorPosition + new Vector3(1, 0, 0);
+
+        while (t < 10)
+        {
+            leftDoor.transform.position = Vector2.Lerp(startLeftDoorPosition, newLeftDoorPosition, t);
+            unlockedDoor.transform.position = Vector2.Lerp(startRightDoorPosition, newRightDoorPosition, t);
+            t += Time.deltaTime;
+            yield return null;
+        }
+    }
 }
