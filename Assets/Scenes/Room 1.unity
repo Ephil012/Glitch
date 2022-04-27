@@ -2979,6 +2979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockedDoor: {fileID: 1439198989344941}
   unlockedDoor: {fileID: 1817784414630829}
+  leftDoor: {fileID: 1246085984502587}
 --- !u!4 &4431556007391951
 Transform:
   m_ObjectHideFlags: 0
