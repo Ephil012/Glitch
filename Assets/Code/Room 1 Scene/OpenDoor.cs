@@ -18,7 +18,7 @@ public class OpenDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckForTouch();
+        // CheckForTouch();
 
         // Vector3 pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
         // RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);

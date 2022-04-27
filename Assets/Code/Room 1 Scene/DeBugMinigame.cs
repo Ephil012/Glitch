@@ -8,6 +8,8 @@ public class DeBugMinigame : MonoBehaviour
     public GameObject bugPrefab;
     int bugMoveForce = 100;
 
+    int score = 0;
+
     RectTransform panel;
 
     public Collider2D collider;
@@ -23,7 +25,12 @@ public class DeBugMinigame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckForTouch();
+        // CheckForTouch();
+
+        if (score > 2) {
+            print("DeBugMinigame: Score > 10. Found 10 Bugs");
+            gameObject.SetActive(false);
+        }
     }
 
     IEnumerator bugGame()
@@ -39,7 +46,7 @@ public class DeBugMinigame : MonoBehaviour
     void createBug() {
         Vector2 spawnPosition = new Vector2(Random.Range(0, 1792), Random.Range(0, 828));
         // Vector2 spawnPosition = new Vector2(1000, 500);
-        print("Debug: " + spawnPosition);
+        // print("Debug: " + spawnPosition);
 
         GameObject newBug = GameObject.Instantiate(bugPrefab, spawnPosition, Quaternion.identity, gameObject.transform);
         // GameObject newBug = Instantiate(bugPrefab, spawnPosition, Quaternion.identity) as GameObject;
@@ -58,7 +65,7 @@ public class DeBugMinigame : MonoBehaviour
              var wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
              var touchPosition = new Vector2(wp.x, wp.y);
  
-            print(touchPosition + " " + Physics2D.OverlapPoint(touchPosition));
+            print(Physics2D.OverlapPoint(touchPosition));
              if (collider == Physics2D.OverlapPoint(touchPosition)){
                  Debug.Log("HIT!");
              }
@@ -68,4 +75,9 @@ public class DeBugMinigame : MonoBehaviour
          }
          return false;
      }
+
+    public void ClickedOnBug() {
+        print("DeBugMinigame: Clicked on Bug");
+        score += 1;
+    }
 }
