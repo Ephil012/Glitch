@@ -10,6 +10,8 @@ public class HapticsControl : MonoBehaviour
     public GameObject player;
     AudioSource _audioSource;
     public AudioClip raygunSound;
+    public PuzzleInteract curPuzzle;
+    public string task = "";
 
     public void Start()
     {
@@ -22,5 +24,14 @@ public class HapticsControl : MonoBehaviour
         Destroy(newBullet, 0.5f);
         _audioSource.PlayOneShot(raygunSound);
         Handheld.Vibrate();
+    }
+
+    public void Interact()
+    {
+        if (curPuzzle != null && task == "puzzle") 
+        {
+            curPuzzle.open = true;
+            Handheld.Vibrate();
+        }
     }
 }
