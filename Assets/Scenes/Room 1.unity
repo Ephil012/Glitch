@@ -180,6 +180,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6904711908762102842, guid: bf06ce255caaa48c4aa8ed48acf61ddb, type: 3}
   player: {fileID: 1714930643}
   raygunSound: {fileID: 8300000, guid: b9f30b0957a864c5981d95454d8a7444, type: 3}
+  curPuzzle: {fileID: 0}
+  task: 
 --- !u!114 &15228509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,7 +2185,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d4a4d7757466780409ba6b062b5164cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
