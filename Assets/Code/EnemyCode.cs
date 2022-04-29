@@ -22,10 +22,15 @@ public class EnemyCode : MonoBehaviour
         if (health <= 0) {
             _animator.SetTrigger("Death");
             Destroy(gameObject , 0.64f);
-           
         }
     }
     
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Bullet") {
+            DamageEnemy();
+        }
+    }
     public void DamageEnemy() {
         print("EnemyCode: DamageEnemy - Received Broadcast");
         health -= 20;
