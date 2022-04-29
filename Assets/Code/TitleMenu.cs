@@ -7,7 +7,7 @@ public class TitleMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("JoystickMovement");
+        SceneManager.LoadScene("Intro");
     }
 
     public void Instructions()
