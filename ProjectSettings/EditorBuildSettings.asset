@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Room 1.unity
     guid: 034fcb85a64694d9ba81594dec1ad0cc
   - enabled: 1
-    path: Assets/Scenes/Room 2.unity
+    path: Assets/Scenes/Room 3.unity
     guid: 20ec7ecefbd054b48b83d0ab6fef511c
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 2118fdae102b5433090ad65d624e2df8, type: 2}
