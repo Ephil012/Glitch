@@ -3,7 +3,11 @@ guid: 0bb5a42d2fd5a4ba6b02cb9aec63bcf0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bulletPrefab: {instanceID: 0}
+  - player: {instanceID: 0}
+  - raygunSound: {instanceID: 0}
+  - curPuzzle: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
