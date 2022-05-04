@@ -10,6 +10,7 @@ public class EnemyCode : MonoBehaviour
 
     Rigidbody2D _rigidBody;
     GameObject player;
+    SpriteRenderer playerSprite;
 
     private Vector2 playerTarget;
     float speed = 0.5f;
@@ -24,6 +25,8 @@ public class EnemyCode : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         _rigidBody = this.GetComponent<Rigidbody2D>();
+
+        playerSprite = player.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -53,10 +56,18 @@ public class EnemyCode : MonoBehaviour
         } else if (other.gameObject.tag == "Player") {
             print("Enemy Hit Player");
             PublicVars.DealDamage();
+            StartCoroutine(PlayerFlashRed());
         }
     }
+
     public void DamageEnemy() {
         print("EnemyCode: DamageEnemy - Received Broadcast");
         health -= 20;
+    }
+
+    IEnumerator PlayerFlashRed() {
+        playerSprite.color = new Color(1f, 0.61f, 0.61f, 1f);
+        yield return new WaitForSeconds(0.2f);
+        playerSprite.color = Color.white;
     }
 }

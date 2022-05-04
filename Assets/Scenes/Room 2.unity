@@ -603,6 +603,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 06d1d3323b7f3fa4783d1fe812f859b5, type: 3}
+    - target: {fileID: 212308079959577092, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212308079959577092, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212308079959577092, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5744221168899325825, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
       propertyPath: joystickControls
       value: 
