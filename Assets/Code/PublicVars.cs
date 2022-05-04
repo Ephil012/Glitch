@@ -7,16 +7,11 @@ public class PublicVars : MonoBehaviour
 
     public static int health = 100;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public static void Reset() {
+        health = 100;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public static void DealDamage() {
+        health -= 10;
     }
 }

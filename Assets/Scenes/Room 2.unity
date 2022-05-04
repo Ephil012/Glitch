@@ -1573,10 +1573,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenMonster (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1718053648390686, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 4777656561539712, guid: 0ce5d754465073341bc8f66affe39967, type: 3}
       propertyPath: m_RootOrder
       value: 2
