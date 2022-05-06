@@ -29,8 +29,8 @@ public class DeBugMinigame : MonoBehaviour
     {
         // CheckForTouch();
 
-        if (score > 2) {
-            print("DeBugMinigame: Score > 10. Found 10 Bugs");
+        if (score > 9) {
+            print("DeBugMinigame: Score > 9. Found 10 Bugs");
             gameObject.SetActive(false);
             TopDoor.BroadcastMessage("UnlockDoor");
         }
