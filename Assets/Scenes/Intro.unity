@@ -171,7 +171,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8554913, y: 1}
+    m_SensorSize: {x: 1.7493188, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -549,7 +549,7 @@ PrefabInstance:
     - target: {fileID: 5744221168899325825, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
       propertyPath: joystickControls
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 567409027}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
 --- !u!1 &449990970
@@ -597,6 +597,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567409027 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 483429498798135606, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+  m_PrefabInstance: {fileID: 1740533797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8669f612eff43f8b28f5137e205799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &628143078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,6 +2862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GeneralCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 483429499014578977, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1714930643}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
 --- !u!1001 &1840393008
