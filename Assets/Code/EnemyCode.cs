@@ -39,7 +39,6 @@ public class EnemyCode : MonoBehaviour
 
         Vector3 direction = player.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        _rigidBody .rotation = angle;
         direction.Normalize();
         playerTarget = direction;
     }
