@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popup: {fileID: 1945079843}
   puzzle: {fileID: 2011566514}
-  actionButton: {fileID: 0}
+  actionButton: {fileID: 1251674853}
   points: 0
   goal: 10
   finished: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7493188, y: 1}
+    m_SensorSize: {x: 2.2747931, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popup: {fileID: 1945079843}
   puzzle: {fileID: 2011566513}
-  actionButton: {fileID: 0}
+  actionButton: {fileID: 1251674853}
   points: 0
   goal: 8
   finished: 0
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popup: {fileID: 1945079843}
   puzzle: {fileID: 2011566512}
-  actionButton: {fileID: 0}
+  actionButton: {fileID: 1251674853}
   points: 0
   goal: 10
   finished: 0
