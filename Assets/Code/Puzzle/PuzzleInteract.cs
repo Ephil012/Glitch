@@ -16,6 +16,9 @@ public class PuzzleInteract : MonoBehaviour
     private bool hasCollided = false;
     public bool open = false;
 
+    public GameObject Door;
+    public GameObject GeneralCanvas;
+
     void Start()
     {
         popup.SetActive(false);
@@ -28,7 +31,7 @@ public class PuzzleInteract : MonoBehaviour
         //Beginning Puzzle
         if (open && hasCollided) //puzzle is open and player is in trigger collider
         {
-            
+            GeneralCanvas.SetActive(false);
             puzzle.SetActive(true);
             popup.SetActive(false);
             //Cursor.visible = true;
@@ -36,7 +39,7 @@ public class PuzzleInteract : MonoBehaviour
         }
         else if (!open && hasCollided) //puzzle is not open but player is in triggerCollider
         {
-            
+            GeneralCanvas.SetActive(true);
             puzzle.SetActive(false);
             popup.SetActive(true);
             //Cursor.visible = false;
@@ -44,6 +47,7 @@ public class PuzzleInteract : MonoBehaviour
         }
         else //puzzle is open but player is not in trigger collider
         {
+            GeneralCanvas.SetActive(true);
             puzzle.SetActive(false);
             popup.SetActive(false);
             //Cursor.visible = false;
@@ -54,8 +58,10 @@ public class PuzzleInteract : MonoBehaviour
         if (points == goal) 
         { 
             finished = true;
+            Door.BroadcastMessage("UnlockDoor");
             puzzle.SetActive(false);
             popup.SetActive(false);
+            GeneralCanvas.SetActive(true);
             //Cursor.visible = false;
             //Cursor.lockState = CursorLockMode.Locked;
             //GameControl.control.puzzleComplete += 1;
@@ -74,7 +80,7 @@ public class PuzzleInteract : MonoBehaviour
             actionButton.GetComponent<HapticsControl>().task = "puzzle";
 
             hasCollided = true;
-            popup.GetComponent<Text>().text = "Hit E to begin tracing.";
+            popup.GetComponent<Text>().text = "Press Interact";
             popup.SetActive(true);
         }
     }
