@@ -1432,7 +1432,7 @@ MonoBehaviour:
   lockedDoor: {fileID: 1323148850}
   unlockedDoor: {fileID: 1428513875}
   leftDoor: {fileID: 1092845221}
-  Level: Room 3
+  Level: End
 --- !u!61 &805713190
 BoxCollider2D:
   m_ObjectHideFlags: 0
