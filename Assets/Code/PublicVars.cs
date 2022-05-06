@@ -14,4 +14,8 @@ public class PublicVars : MonoBehaviour
     public static void DealDamage() {
         health -= 10;
     }
+
+    public static void BoostHealth() {
+        health += 10;
+    }
 }
