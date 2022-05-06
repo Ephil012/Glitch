@@ -39,7 +39,7 @@ public class HapticsControl : MonoBehaviour
         }
 
         newBullet.GetComponent<Rigidbody2D>().AddForce(direction);
-        Destroy(newBullet, 0.5f);
+        Destroy(newBullet, 1f);
         _audioSource.PlayOneShot(raygunSound);
         Handheld.Vibrate();
     }
