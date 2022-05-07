@@ -12,6 +12,8 @@ public class EnemyCode : MonoBehaviour
     GameObject player;
     SpriteRenderer playerSprite;
 
+    SpriteRenderer currentEnemySprite;
+
     private Vector2 playerTarget;
     float speed = 0.5f;
 
@@ -27,6 +29,7 @@ public class EnemyCode : MonoBehaviour
         _rigidBody = this.GetComponent<Rigidbody2D>();
 
         playerSprite = player.GetComponent<SpriteRenderer>();
+        currentEnemySprite = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -52,6 +55,7 @@ public class EnemyCode : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet") {
             DamageEnemy();
+            StartCoroutine(EnemyFlashRed());
         } else if (other.gameObject.tag == "Player") {
             print("Enemy Hit Player");
             PublicVars.DealDamage();
@@ -69,4 +73,12 @@ public class EnemyCode : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         playerSprite.color = Color.white;
     }
+
+    IEnumerator EnemyFlashRed() {
+        currentEnemySprite.color = new Color(1f, 0.61f, 0.61f, 1f);
+        yield return new WaitForSeconds(0.2f);
+        currentEnemySprite.color = Color.white;
+    }
+
+
 }
