@@ -6,7 +6,7 @@ public class DeBugMinigame : MonoBehaviour
 {
 
     public GameObject bugPrefab;
-    int bugMoveForce = 100;
+    int bugMoveForce = 200;
 
     int score = 0;
 
@@ -29,7 +29,7 @@ public class DeBugMinigame : MonoBehaviour
     {
         // CheckForTouch();
 
-        if (score > 9) {
+        if (score > 20) {
             print("DeBugMinigame: Score > 9. Found 10 Bugs");
             gameObject.SetActive(false);
             TopDoor.BroadcastMessage("UnlockDoor");
@@ -39,9 +39,9 @@ public class DeBugMinigame : MonoBehaviour
     IEnumerator bugGame()
     {
         int i;
-        for (i = 0; i < 10; i++) {
+        for (i = 0; i < 20; i++) {
             createBug();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
         yield return null;
     }
