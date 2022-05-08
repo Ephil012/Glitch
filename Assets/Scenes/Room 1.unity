@@ -171,7 +171,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.164251, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: joystickControls
       value: 
       objectReference: {fileID: 1766998118}
+    - target: {fileID: 5955739711833558071, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1458176501}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
 --- !u!1 &714410579 stripped
@@ -700,6 +704,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1714930643}
+    - target: {fileID: 2708992362257153006, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708992362257153006, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760629196971659183, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760629196971659183, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
 --- !u!1001 &1187737707
@@ -820,6 +840,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1458176501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4328289039450284133, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+  m_PrefabInstance: {fileID: 1143711394}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: effebc1611c581040bc9b3221328bf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1591065267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1298,6 +1329,14 @@ PrefabInstance:
     - target: {fileID: 6755869356523185127, guid: 60e5fcf14f0d940c0b2ffd8f1fb79137, type: 3}
       propertyPath: m_Name
       value: HealthBoost
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755869356523185132, guid: 60e5fcf14f0d940c0b2ffd8f1fb79137, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755869356523185132, guid: 60e5fcf14f0d940c0b2ffd8f1fb79137, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60e5fcf14f0d940c0b2ffd8f1fb79137, type: 3}

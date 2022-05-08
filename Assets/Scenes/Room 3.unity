@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &75392863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4328289039450284133, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+  m_PrefabInstance: {fileID: 1900461139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: effebc1611c581040bc9b3221328bf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &139009176
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +182,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8516377, y: 1}
+    m_SensorSize: {x: 1.7788697, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -395,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4052641267887088, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4052641267887088, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -441,10 +452,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 06d1d3323b7f3fa4783d1fe812f859b5, type: 3}
+    - target: {fileID: 1962785749250247257, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 75392863}
     - target: {fileID: 5744221168899325825, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
       propertyPath: joystickControls
       value: 
       objectReference: {fileID: 2004044163}
+    - target: {fileID: 5955739711833558071, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 75392863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 024497ca59b493545a9fe8b5720392e4, type: 3}
 --- !u!4 &435454128 stripped
@@ -655,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4205740261019476, guid: dcf76343326e5514abbe873a7967f41b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4205740261019476, guid: dcf76343326e5514abbe873a7967f41b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1771,7 +1790,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092845221
 GameObject:
@@ -2507,7 +2526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4205740261019476, guid: dcf76343326e5514abbe873a7967f41b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4205740261019476, guid: dcf76343326e5514abbe873a7967f41b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2568,7 +2587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 483429498112594121, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 483429498112594121, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2654,6 +2673,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1714930643}
+    - target: {fileID: 2708992362257153006, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708992362257153006, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0013c4a62e2b4d65a15eecae79a2296, type: 3}
 --- !u!1 &1945079843 stripped
@@ -4758,7 +4785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4530079627535374906, guid: 7440eb77b922c2644a13eae1f4d43e44, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4530079627535374906, guid: 7440eb77b922c2644a13eae1f4d43e44, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5200,7 +5227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4777692940670774, guid: 44f29dd5abee0754597b097157c64823, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4777692940670774, guid: 44f29dd5abee0754597b097157c64823, type: 3}
       propertyPath: m_LocalPosition.x
