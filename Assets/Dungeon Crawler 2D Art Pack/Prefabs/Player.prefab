@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 95041813273560246}
   - component: {fileID: 1714930648}
   - component: {fileID: 5744221168899325825}
+  - component: {fileID: 5955739711833558071}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -142,3 +143,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystickControls: {fileID: 0}
   playerSpeed: 4
+--- !u!114 &5955739711833558071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635833487047996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23aeef90a6feb5468263dc8fcd8fd45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
