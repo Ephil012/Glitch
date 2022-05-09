@@ -124,13 +124,13 @@ TextureImporter:
         width: 151
         height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 563fcb37177494689b7924149f5636e6
+      spriteID: f499e1829d8624813b91a733b7a1f7b0
       internalID: -273606292
       vertices: []
       indices: 
@@ -145,13 +145,13 @@ TextureImporter:
         width: 152
         height: 212
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63a50831879dd42f6affbe2a515cc157
+      spriteID: 2000151957c744787a485098bda2a49f
       internalID: 454623645
       vertices: []
       indices: 
@@ -161,25 +161,25 @@ TextureImporter:
       name: edge
       rect:
         serializedVersion: 2
-        x: 884
+        x: 881
         y: 1875
         width: 255
         height: 212
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68a94e934a62f4119a6ac8c9f157529d
+      spriteID: ba2e9f79f9fd44795be15197aa7df70d
       internalID: -1944237360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bottom_lef
+      name: left_top
       rect:
         serializedVersion: 2
         x: 174
@@ -187,35 +187,35 @@ TextureImporter:
         width: 151
         height: 212
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a9f8d1f2dfac4ae69fe730ccf35b294
-      internalID: -212406396
+      spriteID: 03d2d31475b604017b727b23bf680710
+      internalID: -116058713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bottom_right
+      name: right_bottom
       rect:
         serializedVersion: 2
-        x: 474
+        x: 471
         y: 1575
         width: 152
         height: 212
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2634bf9f7744a4ef68b0e5dd5dd4e1d0
-      internalID: -1319915978
+      spriteID: 1e02231607b1247b4bc0815672166e7b
+      internalID: 383817422
       vertices: []
       indices: 
       edges: []
@@ -229,13 +229,13 @@ TextureImporter:
         width: 21
         height: 151
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d4d034dc1e9f447aab93fc29433fa98
+      spriteID: 7976a0d6bcb724d4dab5bde0665be1a0
       internalID: 1412179193
       vertices: []
       indices: 
@@ -245,25 +245,25 @@ TextureImporter:
       name: floor
       rect:
         serializedVersion: 2
-        x: 1224
-        y: 1786
+        x: 1221
+        y: 1789
         width: 152
         height: 151
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee62fde761c4443ad932d86b6a13867a
+      spriteID: 0b3809a46640940b2a2af1b5c9d0739f
       internalID: 1628964575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top_right
+      name: right_top
       rect:
         serializedVersion: 2
         x: 174
@@ -271,20 +271,20 @@ TextureImporter:
         width: 151
         height: 212
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfad858b66533486ca95b0c26bf96918
-      internalID: -47521629
+      spriteID: eabe9d8cded304a7299f6cea241e8955
+      internalID: -842895925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bottom_left
+      name: left_bottom
       rect:
         serializedVersion: 2
         x: 474
@@ -292,14 +292,14 @@ TextureImporter:
         width: 152
         height: 212
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97bac89842a0041c1966d08b6122ba94
-      internalID: 704824826
+      spriteID: 2c8618684a7e745dca27512a86ac687e
+      internalID: 1318759210
       vertices: []
       indices: 
       edges: []
@@ -313,14 +313,35 @@ TextureImporter:
         width: 21
         height: 151
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b65ed6274be6415fab4d9943ad6877a
+      spriteID: d2f69d957f88d42489d4251bc21a6d35
       internalID: 2100450221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beam_bot
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1472
+        width: 151
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c1e6a03fc434159a76964d6dab2677
+      internalID: 1184265811
       vertices: []
       indices: 
       edges: []
@@ -336,13 +357,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      right_top: -842895925
+      left_bottom: 1318759210
+      beam_bot: 1184265811
+      left_top: -116058713
+      right_bottom: 383817422
       wall: 454623645
-      bottom_right: -1319915978
-      bottom_left: 704824826
       beam_right: 2100450221
-      top_right: -47521629
       beam_left: 1412179193
-      bottom_lef: -212406396
       floor: 1628964575
       beam_top: -273606292
       edge: -1944237360
