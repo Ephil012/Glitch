@@ -14,6 +14,13 @@ public class WaitForAnimation : MonoBehaviour
         StartCoroutine(WaitforAnimation());    
     }
 
+    void Update() {
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            SceneManager.LoadScene("Title");
+        }
+    }
+
     IEnumerator WaitforAnimation() {
         yield return new WaitForSeconds(timeToWait);
         SceneManager.LoadScene("Title");

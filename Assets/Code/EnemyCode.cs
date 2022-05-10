@@ -16,10 +16,16 @@ public class EnemyCode : MonoBehaviour
 
     SpriteRenderer currentEnemySprite;
 
+    public GameObject door;
+
     private Vector2 playerTarget;
-    float speed = 0.5f;
+    public float speed = 0.5f;
 
     int health = 100;
+
+    public int decrement = 20;
+
+    public bool paused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -40,17 +46,24 @@ public class EnemyCode : MonoBehaviour
         if (health <= 0) {
             _animator.SetTrigger("Death");
             Destroy(gameObject , 0.64f);
+            if (door != null) {
+                door.BroadcastMessage("removeEnemy", gameObject);
+            }
         }
 
-        Vector3 direction = player.transform.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        direction.Normalize();
-        playerTarget = direction;
+        if (paused == false) {
+            Vector3 direction = player.transform.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            direction.Normalize();
+            playerTarget = direction;
+        }
     }
 
     void FixedUpdate()
     {  
-        _rigidBody.MovePosition((Vector2)transform.position + (playerTarget * speed * Time.deltaTime));
+        if (paused == false) {
+            _rigidBody.MovePosition((Vector2)transform.position + (playerTarget * speed * Time.deltaTime));
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -59,15 +72,13 @@ public class EnemyCode : MonoBehaviour
             DamageEnemy();
             StartCoroutine(EnemyFlashRed());
         } else if (other.gameObject.tag == "Player") {
-            print("Enemy Hit Player");
-            PublicVars.DealDamage();
-            StartCoroutine(PlayerFlashRed());
+            player.BroadcastMessage("PlayerHit");
         }
     }
 
     public void DamageEnemy() {
         print("EnemyCode: DamageEnemy - Received Broadcast");
-        health -= 20;
+        health -= decrement;
     }
 
     IEnumerator PlayerFlashRed() {

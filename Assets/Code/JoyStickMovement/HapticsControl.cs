@@ -14,13 +14,58 @@ public class HapticsControl : MonoBehaviour
     public string task = "";
     private Vector2 direction;
 
+    private Animator animator;
+
     public void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        animator = player.GetComponent<Animator>();
+    }
+
+     public void setPlayerDirection() {
+        switch(Constants.playerDirection) {
+            case "Right":
+                animator.SetBool("Front_Run", false);
+                animator.SetBool("Back_Run", false);
+                animator.SetBool("Right_Run", true);
+                animator.SetBool("Left_Run", false);
+                animator.SetBool("Idle", false);
+                break;
+            case "Left":
+                animator.SetBool("Front_Run", false);
+                animator.SetBool("Back_Run", false);
+                animator.SetBool("Right_Run", false);
+                animator.SetBool("Left_Run", true);
+                animator.SetBool("Idle", false);
+                break;
+            case "Back":
+                animator.SetBool("Front_Run", false);
+                animator.SetBool("Back_Run", true);
+                animator.SetBool("Right_Run", false);
+                animator.SetBool("Left_Run", false);
+                animator.SetBool("Idle", false);
+                break;
+            case "Front":
+                animator.SetBool("Front_Run", true);
+                animator.SetBool("Back_Run", false);
+                animator.SetBool("Right_Run", false);
+                animator.SetBool("Left_Run", false);
+                animator.SetBool("Idle", false);
+                break;
+            case "Idle":
+                animator.SetBool("Front_Run", false);
+                animator.SetBool("Back_Run", false);
+                animator.SetBool("Right_Run", false);
+                animator.SetBool("Left_Run", false);
+                animator.SetBool("Idle", true);
+                break;
+        }
     }
 
     public void Vibrate() {
         GameObject newBullet = Instantiate(bulletPrefab, player.transform.position, Quaternion.identity);
+
+        setPlayerDirection();
 
         switch(Constants.playerDirection)
         {
