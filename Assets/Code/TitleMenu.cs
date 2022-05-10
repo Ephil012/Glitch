@@ -7,7 +7,7 @@ public class TitleMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("Room 4");
     }
 
     public void Instructions()

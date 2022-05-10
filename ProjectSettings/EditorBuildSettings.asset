@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/AnimationIntro.unity
     guid: 3baca5cfa717c4ded97d3723a4887661
@@ -25,7 +22,7 @@ EditorBuildSettings:
     guid: 034fcb85a64694d9ba81594dec1ad0cc
   - enabled: 1
     path: Assets/Scenes/Room 2.unity
-    guid: df57bb77379754ea0917809cae9ac125
+    guid: e85157fb41ce842ee9664cc0b10aec01
   - enabled: 1
     path: Assets/Scenes/Room 3.unity
     guid: 20ec7ecefbd054b48b83d0ab6fef511c

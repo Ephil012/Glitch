@@ -23,6 +23,8 @@ public class EnemyCode : MonoBehaviour
 
     int health = 100;
 
+    public int decrement = 20;
+
     public bool paused = false;
 
     // Start is called before the first frame update
@@ -78,7 +80,7 @@ public class EnemyCode : MonoBehaviour
 
     public void DamageEnemy() {
         print("EnemyCode: DamageEnemy - Received Broadcast");
-        health -= 20;
+        health -= decrement;
     }
 
     IEnumerator PlayerFlashRed() {

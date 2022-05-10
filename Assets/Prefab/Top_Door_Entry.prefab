@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1147931704688042336}
   - component: {fileID: 1147931704688042339}
   - component: {fileID: 1147931704688042338}
+  - component: {fileID: 5612172663768781000}
   m_Layer: 0
   m_Name: Top_Door_Entry
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147931704688042340}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.06, y: 17.38, z: 0}
   m_LocalScale: {x: 1.365, y: 1.365, z: 1.365}
   m_ConstrainProportionsScale: 0
@@ -56,6 +57,7 @@ MonoBehaviour:
   leftDoor: {fileID: 1147931705723266635}
   Level: 
   entry: 1
+  pausedEnemies: 0
 --- !u!50 &1147931704688042339
 Rigidbody2D:
   serializedVersion: 4
@@ -103,6 +105,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.503299, y: 1.6309633}
   m_EdgeRadius: 0
+--- !u!114 &5612172663768781000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147931704688042340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722d1ac6327394948a88680ec2df2969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
 --- !u!1 &1147931705024936023
 GameObject:
   m_ObjectHideFlags: 0
