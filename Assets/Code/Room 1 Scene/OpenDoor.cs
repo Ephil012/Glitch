@@ -12,11 +12,17 @@ public class OpenDoor : MonoBehaviour
     public GameObject leftDoor;
     public string Level = "Room 1";
 
+    public bool entry = false;
+    public bool pausedEnemies = false;
+
     bool isDoorLocked = true;
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (isDoorLocked == false) {
+        if (isDoorLocked == false && other.gameObject.tag == "Player" && entry == false) {
             Application.LoadLevel(Level);
+        } else if (other.gameObject.tag == "Player" && entry == true && pausedEnemies == false) {
+            UnlockDoor();
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
@@ -35,7 +41,7 @@ public class OpenDoor : MonoBehaviour
         Vector3 newLeftDoorPosition = startLeftDoorPosition + new Vector3(-1, 0, 0);
         Vector3 newRightDoorPosition = startRightDoorPosition + new Vector3(1, 0, 0);
 
-        while (t < 10)
+        while (t < 2)
         {
             leftDoor.transform.position = Vector2.Lerp(startLeftDoorPosition, newLeftDoorPosition, t);
             unlockedDoor.transform.position = Vector2.Lerp(startRightDoorPosition, newRightDoorPosition, t);
