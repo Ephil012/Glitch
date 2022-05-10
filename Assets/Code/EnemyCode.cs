@@ -72,9 +72,7 @@ public class EnemyCode : MonoBehaviour
             DamageEnemy();
             StartCoroutine(EnemyFlashRed());
         } else if (other.gameObject.tag == "Player") {
-            print("Enemy Hit Player");
-            PublicVars.DealDamage();
-            StartCoroutine(PlayerFlashRed());
+            player.BroadcastMessage("PlayerHit");
         }
     }
 
