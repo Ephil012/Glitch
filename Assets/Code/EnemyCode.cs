@@ -19,7 +19,7 @@ public class EnemyCode : MonoBehaviour
     public GameObject door;
 
     private Vector2 playerTarget;
-    float speed = 0.5f;
+    public float speed = 0.5f;
 
     int health = 100;
 

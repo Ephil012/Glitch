@@ -11,6 +11,7 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     bool hasOpened = false;
+    public GameObject Door;
     int index;
 
     AudioSource _audioSource;
@@ -76,6 +77,7 @@ public class Dialogue : MonoBehaviour
             infoComputer.BroadcastMessage("ChangeChestSprite");
             hasOpened = true;
             gameObject.SetActive(false);
+            Door.BroadcastMessage("UnlockDoor");
         }
     }
 }

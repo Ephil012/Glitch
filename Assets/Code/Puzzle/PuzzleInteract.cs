@@ -50,6 +50,8 @@ public class PuzzleInteract : MonoBehaviour
             GeneralCanvas.SetActive(true);
             puzzle.SetActive(false);
             popup.SetActive(false);
+            open = false;
+            hasCollided = false;
             //Cursor.visible = false;
             //Cursor.lockState = CursorLockMode.Locked;
         }

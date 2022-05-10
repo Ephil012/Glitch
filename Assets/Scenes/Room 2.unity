@@ -266,7 +266,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.973306, y: 1}
+    m_SensorSize: {x: 1.7182609, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3484,7 +3484,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.25, y: 0.25012183, z: 0}
   m_MaxChunkCount: 16
@@ -12302,6 +12302,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 1506641416}
   - {fileID: 814598380}
+  keepCollid: 1
 --- !u!1001 &5835651123359974743
 PrefabInstance:
   m_ObjectHideFlags: 0

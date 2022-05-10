@@ -168,5 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}
+  speed: 0.5
   decrement: 5
   paused: 0

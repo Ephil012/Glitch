@@ -16,6 +16,7 @@ public class OpenDoor : MonoBehaviour
     public bool pausedEnemies = false;
 
     bool isDoorLocked = true;
+    bool done = false;
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (isDoorLocked == false && other.gameObject.tag == "Player" && entry == false) {
@@ -35,18 +36,21 @@ public class OpenDoor : MonoBehaviour
     }
 
     IEnumerator SlideDoor() {
-        float t = 0;
-        Vector3 startLeftDoorPosition = leftDoor.transform.position;
-        Vector3 startRightDoorPosition = unlockedDoor.transform.position;
-        Vector3 newLeftDoorPosition = startLeftDoorPosition + new Vector3(-1, 0, 0);
-        Vector3 newRightDoorPosition = startRightDoorPosition + new Vector3(1, 0, 0);
+        if (done == false) {
+            float t = 0;
+            Vector3 startLeftDoorPosition = leftDoor.transform.position;
+            Vector3 startRightDoorPosition = unlockedDoor.transform.position;
+            Vector3 newLeftDoorPosition = startLeftDoorPosition + new Vector3(-1, 0, 0);
+            Vector3 newRightDoorPosition = startRightDoorPosition + new Vector3(1, 0, 0);
 
-        while (t < 2)
-        {
-            leftDoor.transform.position = Vector2.Lerp(startLeftDoorPosition, newLeftDoorPosition, t);
-            unlockedDoor.transform.position = Vector2.Lerp(startRightDoorPosition, newRightDoorPosition, t);
-            t += Time.deltaTime;
-            yield return null;
+            while (t < 2)
+            {
+                leftDoor.transform.position = Vector2.Lerp(startLeftDoorPosition, newLeftDoorPosition, t);
+                unlockedDoor.transform.position = Vector2.Lerp(startRightDoorPosition, newRightDoorPosition, t);
+                t += Time.deltaTime;
+                yield return null;
+            }
         }
+        done = true;
     }
 }

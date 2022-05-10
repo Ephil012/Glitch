@@ -38,8 +38,7 @@ public class DeBugMinigame : MonoBehaviour
 
     IEnumerator bugGame()
     {
-        int i;
-        for (i = 0; i < 20; i++) {
+        while (score <= 20) {
             createBug();
             yield return new WaitForSeconds(0.5f);
         }
